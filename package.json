@@ -1,0 +1,18 @@
+{
+  "name": "daily-interview-prep",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Emails 10 MERN + System Design interview questions every day at 11:00 IST",
+  "scripts": {
+    "send": "node src/index.js",
+    "preview": "node src/index.js --dry-run"
+  },
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "nodemailer": "^10.1.7",
+    "zod": "^4.6.7"
+  }
+}

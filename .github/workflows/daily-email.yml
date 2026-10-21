@@ -1,0 +1,54 @@
+name: Daily Interview Prep Email
+
+on:
+  schedule:
+    # 05:30 UTC = 11:00 AM IST (GitHub may start scheduled runs a few minutes late)
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Send even if today already went out'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-email
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm install -g @anthropic-ai/claude-code
+
+      - name: Generate and send email
+        run: node src/index.js ${{ inputs.force && '--force' || '' }}
+        env:
+          # Long-lived token for your Claude subscription, from `claude setup-token`
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+
+      # Saving history avoids repeat questions and keeps the repo active
+      # (GitHub disables schedules on repos with no activity for 60 days).
+      - name: Commit question history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/history.json
+          git diff --cached --quiet || git commit -m "history: $(TZ=Asia/Kolkata date +%F)"
+          git push

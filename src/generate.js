@@ -79,7 +79,7 @@ function runClaude(prompt) {
   });
 }
 
-export async function generateDigest({ tracks, company, dateLabel, pastQuestions }) {
+export async function generateDigest({ tracks, company, dateLabel, pastQuestions, day, level }) {
   const pastBlock = pastQuestions.length
     ? `Questions already sent on previous days — do NOT repeat these or ask near-duplicates:\n${pastQuestions.map((q) => `- ${q}`).join('\n')}`
     : 'No previous questions yet.';
@@ -90,8 +90,9 @@ Today's tracks: "${tracks[0]}" and "${tracks[1]}". Focus company: ${company}.
 Write exactly ${QUESTIONS_PER_DAY} questions:
 - about 4 from "${tracks[0]}", about 4 from "${tracks[1]}", and 2 from any other area of the MERN + system design stack (JavaScript, TypeScript, React, Next.js, Node.js, Express, NestJS, MongoDB, PostgreSQL, Redis, REST/GraphQL/WebSockets, AWS, Docker, testing, HLD, LLD).
 - at least 3 must be tied to ${company}: questions known to be asked in ${company}'s interviews, or design problems based on ${company}'s product (set "tag" to "${company}" for those; "Industry Common" for the rest).
-- difficulty mix: 2 Easy, 4 Medium, 4 Hard.
-- order them so the Easy ones are not all at the start.
+- this is day ${day} of the engineer's prep ("${level.label}" level). Difficulty mix: exactly ${level.easy} Easy, ${level.medium} Medium, ${level.hard} Hard.
+  Easy = core fundamentals every candidate must nail; Medium = applying them / common follow-ups; Hard = senior-level design, trade-offs and edge cases.${day <= 7 ? '\n  It is early in the prep: keep even the Medium questions approachable, and build confidence before depth.' : ''}
+- order them from easiest to hardest (all Easy first, then Medium, then Hard).
 
 ${pastBlock}`;
 

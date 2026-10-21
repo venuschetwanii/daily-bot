@@ -29,6 +29,21 @@ export const FOCUS_COMPANIES = [
 
 export const QUESTIONS_PER_DAY = 10;
 
+// Difficulty ramps up as you go. "Day" counts emails actually sent (from data/history.json).
+// Each level's easy + medium + hard must add up to QUESTIONS_PER_DAY.
+export const DIFFICULTY_RAMP = [
+  { fromDay: 1, label: 'Warm-up', easy: 6, medium: 4, hard: 0 },
+  { fromDay: 4, label: 'Foundations', easy: 5, medium: 4, hard: 1 },
+  { fromDay: 8, label: 'Building up', easy: 4, medium: 4, hard: 2 },
+  { fromDay: 15, label: 'Intermediate', easy: 3, medium: 4, hard: 3 },
+  { fromDay: 22, label: 'Interview-ready', easy: 2, medium: 4, hard: 4 },
+  { fromDay: 36, label: 'Advanced', easy: 1, medium: 4, hard: 5 },
+];
+
+export function difficultyForDay(day) {
+  return DIFFICULTY_RAMP.filter((level) => day >= level.fromDay).at(-1);
+}
+
 // How many past questions to show the model so it doesn't repeat itself.
 export const HISTORY_WINDOW = 250;
 

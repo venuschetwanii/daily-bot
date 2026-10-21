@@ -46,7 +46,7 @@ function questionCard(q, i) {
   </div>`;
 }
 
-export function renderEmail({ questions, tracks, company, dateLabel }) {
+export function renderEmail({ questions, tracks, company, dateLabel, day, level }) {
   const html = `<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
@@ -54,7 +54,7 @@ export function renderEmail({ questions, tracks, company, dateLabel }) {
     <div style="padding:28px 24px;border-radius:14px;background:linear-gradient(135deg,#4f46e5,#7c3aed);background-color:#4f46e5;color:#ffffff;margin-bottom:20px;">
       <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.85;">Daily Interview Prep</div>
       <div style="font-size:24px;font-weight:800;margin:8px 0 4px;">🧠 MERN &amp; System Design Interview Questions</div>
-      <div style="font-size:14px;opacity:.9;">${esc(dateLabel)}</div>
+      <div style="font-size:14px;opacity:.9;">${esc(dateLabel)} · Day ${day} · ${esc(level.label)} level</div>
       <div style="margin-top:14px;">
         ${tracks.map((t) => pill(t, '#ffffff', 'rgba(255,255,255,.2)')).join('')}
         ${pill(`Focus: ${company}`, '#4f46e5', '#ffffff')}
@@ -69,7 +69,7 @@ export function renderEmail({ questions, tracks, company, dateLabel }) {
   const text = [
     'Daily Interview Prep',
     '🧠 MERN & System Design Interview Questions',
-    dateLabel,
+    `${dateLabel} · Day ${day} · ${level.label} level`,
     '',
     ...tracks,
     `Focus: ${company}`,

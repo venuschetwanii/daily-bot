@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import nodemailer from 'nodemailer';
-import { FOCUS_COMPANIES, HISTORY_WINDOW, TRACK_PAIRS } from './config.js';
+import { FOCUS_COMPANIES, HISTORY_WINDOW, TRACK_PAIRS, difficultyForDay } from './config.js';
 import { generateDigest } from './generate.js';
 import { renderEmail } from './template.js';
 
@@ -72,10 +72,12 @@ async function main() {
   const tracks = TRACK_PAIRS[dayIndex % TRACK_PAIRS.length];
   const company = FOCUS_COMPANIES[dayIndex % FOCUS_COMPANIES.length];
   const pastQuestions = history.slice(-HISTORY_WINDOW).map((h) => h.question);
+  const day = new Set(history.map((h) => h.date)).size + 1;
+  const level = difficultyForDay(day);
 
-  console.log(`${isoDate}: ${tracks.join(' + ')} — focus ${company}`);
-  const questions = await generateDigest({ tracks, company, dateLabel, pastQuestions });
-  const { html, text } = renderEmail({ questions, tracks, company, dateLabel });
+  console.log(`${isoDate}: day ${day} (${level.label}) — ${tracks.join(' + ')} — focus ${company}`);
+  const questions = await generateDigest({ tracks, company, dateLabel, pastQuestions, day, level });
+  const { html, text } = renderEmail({ questions, tracks, company, dateLabel, day, level });
 
   if (DRY_RUN) {
     await fs.writeFile(PREVIEW_FILE, html);

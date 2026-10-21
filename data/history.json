@@ -48,5 +48,55 @@
     "date": "2026-10-21",
     "category": "Payments & API Design",
     "question": "A user clicks 'Pay' and their network drops; the client retries. How do you design the payment API so the customer is never charged twice?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "SQS, SNS and EventBridge all move messages between services. When would you pick each one?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "What is a Lambda cold start, why does it happen, and how do you reduce its impact on a Node.js API?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "Your Node.js Docker image is 1.2 GB and builds slowly. How would you make it smaller and faster to build?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "What's the difference between vertical and horizontal scaling, and why do people say your web servers should be stateless?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Next.js",
+    "question": "Explain SSR, SSG, ISR and client-side rendering in Next.js. Which would you use for a product listing page, a product detail page and a user dashboard?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "Amazon's shopping cart was the motivating example for Dynamo. Why would Amazon choose availability over strong consistency for 'Add to Cart'?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "Your service's average latency looks fine, but p99 just doubled and customers are complaining. Walk me through how you'd investigate using AWS tooling."
+  },
+  {
+    "date": "2026-10-21",
+    "category": "PostgreSQL",
+    "question": "A query like SELECT * FROM orders WHERE customer_id = $1 AND status = 'PENDING' ORDER BY created_at DESC LIMIT 20 is slow on a 50-million-row table. How do you diagnose and fix it?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "Design a rate limiter for a public API so each user can make at most 100 requests per minute, across many API servers."
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "When a customer clicks 'Place Order' on Amazon, the order, payment, inventory and shipping services all need to agree. How do you coordinate this across microservices without a distributed transaction?"
   }
 ]

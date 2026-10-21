@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "Your NestJS worker consumes from an SQS queue, and sometimes the same message gets processed twice. Why does this happen, and how do you design around it?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "Design the inventory and checkout flow for an Amazon Lightning Deal: 10,000 units, a million shoppers clicking 'Buy' at the same moment. How do you avoid overselling while staying fast?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "Explain the testing pyramid. In a React + NestJS app, what would you unit test, integration test and end-to-end test?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "Your Node.js Lambda functions talk to PostgreSQL on RDS. During a traffic spike the database starts rejecting connections with 'too many clients'. What's going on and how do you fix it?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "You add Redis caching in front of a slow product API. Compare cache-aside, write-through and write-behind, and explain how you'd handle a cache stampede."
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Node.js",
+    "question": "What's the order of execution between process.nextTick, Promise.then, setTimeout(fn, 0) and setImmediate in Node.js?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "AWS, DevOps & Testing",
+    "question": "How would you deploy a change to a service running across many regions so that a bad release hurts as few customers as possible? Walk me through blue/green, canary and automated rollback."
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "In 2017 a single mistyped command took down Amazon S3 in us-east-1 for hours. How do you design systems and operational tooling so that one mistake can't take everything down?"
+  },
+  {
+    "date": "2026-10-21",
+    "category": "High-Level System Design",
+    "question": "Design Amazon's 'Notify me when this item is back in stock' feature. Millions of users may subscribe to a popular item."
+  },
+  {
+    "date": "2026-10-21",
+    "category": "Payments & API Design",
+    "question": "A user clicks 'Pay' and their network drops; the client retries. How do you design the payment API so the customer is never charged twice?"
+  }
+]

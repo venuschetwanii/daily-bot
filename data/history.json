@@ -98,5 +98,55 @@
     "date": "2026-10-21",
     "category": "High-Level System Design",
     "question": "When a customer clicks 'Place Order' on Amazon, the order, payment, inventory and shipping services all need to agree. How do you coordinate this across microservices without a distributed transaction?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "JavaScript & TypeScript Internals",
+    "question": "What is a closure? What does this print, and why: for (var i = 0; i < 3; i++) { setTimeout(() => console.log(i), 0); } How would you fix it?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "JavaScript & TypeScript Internals",
+    "question": "How is the value of 'this' decided in JavaScript? How do arrow functions change it, and what do call, apply and bind do?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "JavaScript & TypeScript Internals",
+    "question": "What's the difference between 'interface' and 'type' in TypeScript, and what happens to your types when the code actually runs?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "React",
+    "question": "Why does React warn you to add a 'key' to list items, and what goes wrong if you use the array index as the key?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "High-Level System Design",
+    "question": "What does a load balancer do? Explain the difference between Layer 4 and Layer 7 load balancing and a few common balancing algorithms."
+  },
+  {
+    "date": "2026-10-22",
+    "category": "High-Level System Design",
+    "question": "Microsoft Teams shows whether a colleague is online and pushes new messages instantly. Compare short polling, long polling, Server-Sent Events and WebSockets. Which would you use?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "JavaScript & TypeScript Internals",
+    "question": "Implement a debounce function from scratch. How is it different from throttle, and where would you use each?"
+  },
+  {
+    "date": "2026-10-22",
+    "category": "MongoDB",
+    "question": "In MongoDB, when do you embed related data inside a document and when do you reference it in a separate collection? Walk me through modeling users, orders and order items."
+  },
+  {
+    "date": "2026-10-22",
+    "category": "High-Level System Design",
+    "question": "Microsoft runs aka.ms to turn long URLs into short links. Design a URL shortener like it: creating short links, redirecting fast, and handling billions of clicks."
+  },
+  {
+    "date": "2026-10-22",
+    "category": "High-Level System Design",
+    "question": "Design the messaging backend for Microsoft Teams chat: 1:1 and group chats, message history, and delivery to users on multiple devices, including ones that are offline."
   }
 ]

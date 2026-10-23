@@ -148,5 +148,55 @@
     "date": "2026-10-22",
     "category": "High-Level System Design",
     "question": "Design the messaging backend for Microsoft Teams chat: 1:1 and group chats, message history, and delivery to users on multiple devices, including ones that are offline."
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Networking & Web Fundamentals",
+    "question": "What happens, step by step, when you type google.com into your browser and press Enter?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Auth & Security",
+    "question": "What's the difference between authentication and authorization? Compare session-based auth with JWTs. Which would you use for a Next.js app with NestJS microservices?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "React & Next.js",
+    "question": "Explain useEffect's dependency array and its cleanup function. Why might an effect run in an infinite loop, and why does it run twice in development?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "React & Next.js",
+    "question": "What's the difference between React.memo, useMemo and useCallback? When do they actually improve performance, and when are they wasted?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Low-Level Design",
+    "question": "Explain the SOLID principles with a small example from a backend you've built."
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Low-Level Design",
+    "question": "Your checkout supports cards, UPI and wallets, and product wants to add 'Pay Later'. How would the Strategy pattern help, and how would you wire it up in TypeScript?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "React & Next.js",
+    "question": "In the Next.js App Router, what's the difference between Server Components and Client Components? How do you decide where the 'use client' boundary goes?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "React & Next.js",
+    "question": "Build a Google Search-style autocomplete box in React. As the user types, show suggestions from an API. How do you keep it fast, correct and accessible?"
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Low-Level Design",
+    "question": "Design and implement an LRU (Least Recently Used) cache with get(key) and put(key, value), both in O(1) time, and a fixed capacity."
+  },
+  {
+    "date": "2026-10-23",
+    "category": "Low-Level Design",
+    "question": "Do a low-level design for meeting booking in Google Calendar. Users can create events, invite attendees, check for conflicts, and find the first free slot shared by a group."
   }
 ]

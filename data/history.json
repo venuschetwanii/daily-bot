@@ -198,5 +198,55 @@
     "date": "2026-10-23",
     "category": "Low-Level Design",
     "question": "Do a low-level design for meeting booking in Google Calendar. Users can create events, invite attendees, check for conflicts, and find the first free slot shared by a group."
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Node.js, Express & NestJS",
+    "question": "What is middleware in Express? What does next() do, why does the order of app.use() calls matter, and how is error-handling middleware different?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Node.js, Express & NestJS",
+    "question": "In NestJS, what are modules, providers and controllers, and how does dependency injection work? Why is it better than just calling new UserService() yourself?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "High-Level System Design",
+    "question": "What is a CDN and why does it matter for a video service? Netflix built its own CDN, Open Connect, instead of only renting one. Why might they do that?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "High-Level System Design",
+    "question": "Netflix famously moved from a monolith in its own data center to hundreds of microservices on AWS. What are the real pros and cons of microservices versus a monolith, and when would you NOT split?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Databases (SQL vs NoSQL)",
+    "question": "Netflix stores viewing history for hundreds of millions of members, while billing needs strict correctness. How do you choose between a relational database like PostgreSQL and a NoSQL store like Cassandra or MongoDB?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Node.js, Express & NestJS",
+    "question": "Walk me through the NestJS request lifecycle. In what order do middleware, guards, interceptors, pipes and exception filters run, and what would you use each one for?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "Node.js, Express & NestJS",
+    "question": "Users download large PDF reports (up to 2 GB) stored in S3 through your Node.js API, and the server keeps running out of memory. How would you fix it using streams, and what is backpressure?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "High-Level System Design",
+    "question": "The Netflix homepage calls dozens of backend services. If the recommendations service becomes slow, how do you stop it from taking down the whole page? Explain timeouts, retries, circuit breakers, bulkheads and fallbacks."
+  },
+  {
+    "date": "2026-10-24",
+    "category": "React & Frontend Performance",
+    "question": "Build a Netflix-style browse page in React: dozens of horizontal rows, each with many poster thumbnails. It feels janky on low-end devices. How do you make it fast?"
+  },
+  {
+    "date": "2026-10-24",
+    "category": "High-Level System Design",
+    "question": "Design Netflix: studios upload titles, members around the world press Play and stream smoothly on any device and network, and 'Continue Watching' resumes where they left off on any device."
   }
 ]

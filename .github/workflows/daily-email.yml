@@ -1,9 +1,12 @@
 name: Daily Interview Prep Email
 
 on:
+  # Main trigger: cron-job.org calls workflow_dispatch at 11:00 AM IST every day (see README).
+  # These schedules are only backups — GitHub's scheduler can run hours late — and they do
+  # nothing if today's email already went out. Odd minutes avoid GitHub's busiest slots.
   schedule:
-    # 05:30 UTC = 11:00 AM IST (GitHub may start scheduled runs a few minutes late)
-    - cron: '30 5 * * *'
+    - cron: '43 5 * * *'   # 11:13 AM IST
+    - cron: '17 6 * * *'   # 11:47 AM IST
   workflow_dispatch:
     inputs:
       force:

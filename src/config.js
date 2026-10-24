@@ -27,17 +27,17 @@ export const FOCUS_COMPANIES = [
   'Postman', 'Zepto', 'Shopify',
 ];
 
-export const QUESTIONS_PER_DAY = 10;
+export const QUESTIONS_PER_DAY = 5;
 
 // Difficulty ramps up as you go. "Day" counts emails actually sent (from data/history.json).
 // Each level's easy + medium + hard must add up to QUESTIONS_PER_DAY.
 export const DIFFICULTY_RAMP = [
-  { fromDay: 1, label: 'Warm-up', easy: 6, medium: 4, hard: 0 },
-  { fromDay: 4, label: 'Foundations', easy: 5, medium: 4, hard: 1 },
-  { fromDay: 8, label: 'Building up', easy: 4, medium: 4, hard: 2 },
-  { fromDay: 15, label: 'Intermediate', easy: 3, medium: 4, hard: 3 },
-  { fromDay: 22, label: 'Interview-ready', easy: 2, medium: 4, hard: 4 },
-  { fromDay: 36, label: 'Advanced', easy: 1, medium: 4, hard: 5 },
+  { fromDay: 1, label: 'Warm-up', easy: 4, medium: 1, hard: 0 },
+  { fromDay: 4, label: 'Foundations', easy: 3, medium: 2, hard: 0 },
+  { fromDay: 8, label: 'Building up', easy: 2, medium: 2, hard: 1 },
+  { fromDay: 15, label: 'Intermediate', easy: 1, medium: 3, hard: 1 },
+  { fromDay: 22, label: 'Interview-ready', easy: 1, medium: 2, hard: 2 },
+  { fromDay: 36, label: 'Advanced', easy: 0, medium: 2, hard: 3 },
 ];
 
 export function difficultyForDay(day) {

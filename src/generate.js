@@ -8,7 +8,7 @@ const QuestionSchema = z.object({
   difficulty: z.enum(['Easy', 'Medium', 'Hard']),
   tag: z.string().describe('The focus company name if this question is tied to that company, otherwise "Industry Common"'),
   question: z.string(),
-  simpleTake: z.string().describe('3-5 sentence plain-English explanation of the answer'),
+  simpleTake: z.string().describe('The answer in very simple everyday words: short sentences, an everyday analogy, no unexplained jargon'),
   realStory: z.string().describe('A concrete story showing the concept in the real world'),
   rememberIt: z.string().describe('One memorable sentence / analogy'),
   commonMistake: z.string().describe('What candidates usually get wrong and the better answer'),
@@ -25,7 +25,7 @@ ${CANDIDATE_PROFILE}
 
 How to write each question:
 - "question": phrased the way an interviewer would ask it. Mix conceptual, debugging/"what happens when", and design questions. Prefer questions that come up in real SDE-2 / senior full-stack loops over trivia.
-- "simpleTake": explain the answer simply, like to a smart friend — no jargon without a one-line explanation. Include the key technical points an interviewer listens for.
+- "simpleTake": explain the answer the way you'd explain it to a friend over chai who is new to tech. Use short sentences (under ~15 words each) and everyday words. Start with an everyday comparison (a restaurant, a queue at a bank, a library...) and then map it back to the tech. If you must use a technical term, explain it right away in plain words in brackets, e.g. "a cache (a quick-access copy kept close by)". Still cover the 2-3 key points an interviewer listens for, just in plain words. Around 60-90 words.
 - "realStory": a concrete story. Use well-documented public engineering stories (company engineering blogs, famous outages, postmortems, open-source history) only when you are confident of the facts. Otherwise write a realistic scenario framed honestly ("A fintech team...", "Imagine a Next.js e-commerce site..."), never presented as a real named company's history. Stories that resemble the engineer's own stack (NestJS microservices, SQS, Redis, Next.js, MongoDB, payments) are a plus.
 - "rememberIt": one punchy sentence or analogy.
 - "commonMistake": the typical weak answer and what the stronger answer adds.
@@ -88,8 +88,8 @@ export async function generateDigest({ tracks, company, dateLabel, pastQuestions
 Today's tracks: "${tracks[0]}" and "${tracks[1]}". Focus company: ${company}.
 
 Write exactly ${QUESTIONS_PER_DAY} questions:
-- about 4 from "${tracks[0]}", about 4 from "${tracks[1]}", and 2 from any other area of the MERN + system design stack (JavaScript, TypeScript, React, Next.js, Node.js, Express, NestJS, MongoDB, PostgreSQL, Redis, REST/GraphQL/WebSockets, AWS, Docker, testing, HLD, LLD).
-- at least 3 must be tied to ${company}: questions known to be asked in ${company}'s interviews, or design problems based on ${company}'s product (set "tag" to "${company}" for those; "Industry Common" for the rest).
+- 2 from "${tracks[0]}", 2 from "${tracks[1]}", and 1 from any other area of the MERN + system design stack (JavaScript, TypeScript, React, Next.js, Node.js, Express, NestJS, MongoDB, PostgreSQL, Redis, REST/GraphQL/WebSockets, AWS, Docker, testing, HLD, LLD).
+- 1 or 2 must be tied to ${company}: questions known to be asked in ${company}'s interviews, or design problems based on ${company}'s product (set "tag" to "${company}" for those; "Industry Common" for the rest).
 - this is day ${day} of the engineer's prep ("${level.label}" level). Difficulty mix: exactly ${level.easy} Easy, ${level.medium} Medium, ${level.hard} Hard.
   Easy = core fundamentals every candidate must nail; Medium = applying them / common follow-ups; Hard = senior-level design, trade-offs and edge cases.${day <= 7 ? '\n  It is early in the prep: keep even the Medium questions approachable, and build confidence before depth.' : ''}
 - order them from easiest to hardest (all Easy first, then Medium, then Hard).

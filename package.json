@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Emails 10 MERN + System Design interview questions every day at 11:00 IST",
+  "description": "Emails 5 MERN + System Design interview questions every day at 11:00 IST",
   "scripts": {
     "send": "node src/index.js",
     "preview": "node src/index.js --dry-run"

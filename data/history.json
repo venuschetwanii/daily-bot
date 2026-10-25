@@ -248,5 +248,30 @@
     "date": "2026-10-24",
     "category": "High-Level System Design",
     "question": "Design Netflix: studios upload titles, members around the world press Play and stream smoothly on any device and network, and 'Continue Watching' resumes where they left off on any device."
+  },
+  {
+    "date": "2026-10-25",
+    "category": "MongoDB & Databases",
+    "question": "What does ACID mean for a database transaction? Does MongoDB support transactions across multiple documents, and when do you actually need them?"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "Backend & API Design",
+    "question": "Design the REST API for Airbnb listings and bookings. Which URLs and HTTP methods would you use, what is the difference between PUT and PATCH, and which status codes would you return?"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "JavaScript",
+    "question": "What is the difference between Promise.all, Promise.allSettled, Promise.race and Promise.any? Give a real use for each."
+  },
+  {
+    "date": "2026-10-25",
+    "category": "MongoDB & Databases",
+    "question": "Using MongoDB's aggregation pipeline, find the top 5 hosts by total booking revenue in the last 30 days, with each host's name. How would you write it, and how do you keep it fast?"
+  },
+  {
+    "date": "2026-10-25",
+    "category": "Backend & API Design",
+    "question": "Airbnb search returns thousands of listings. How would you paginate the results API? Compare offset pagination with cursor (keyset) pagination, and explain what goes wrong with each."
   }
 ]

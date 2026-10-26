@@ -273,5 +273,30 @@
     "date": "2026-10-25",
     "category": "Backend & API Design",
     "question": "Airbnb search returns thousands of listings. How would you paginate the results API? Compare offset pagination with cursor (keyset) pagination, and explain what goes wrong with each."
+  },
+  {
+    "date": "2026-10-26",
+    "category": "React & Next.js",
+    "question": "What is the virtual DOM, and how does React's reconciliation decide what to actually change on the page? What makes a component re-render?"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Web & APIs",
+    "question": "Your Next.js app on app.example.com calls your NestJS API on api.example.com, and the browser shows a CORS error, but the same request works fine in Postman. What is CORS and how do you fix it properly?"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Performance & Scalability",
+    "question": "On PhonePe, people open their transaction history far more often than they make payments. Those reads are overloading the primary PostgreSQL database. What is a read replica, how would you use it, and what is replication lag?"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "React & Next.js",
+    "question": "Your Next.js page throws 'Hydration failed because the server rendered HTML didn't match the client'. What is hydration, what usually causes this error, and how do you fix it?"
+  },
+  {
+    "date": "2026-10-26",
+    "category": "Performance & Scalability",
+    "question": "PhonePe users can download a monthly account statement as a PDF. Your Node.js service builds the PDF inside the request handler. During peak traffic, the whole service freezes, even simple health checks time out. Why, and how would you fix it?"
   }
 ]
